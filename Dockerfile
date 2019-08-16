@@ -41,8 +41,7 @@ RUN mkdir /usr/local/www/aria2/Download \
   && wget -N --no-check-certificate https://github.com/mayswind/AriaNg/releases/download/${version}/AriaNg-${version}.zip \
   && unzip AriaNg-${version}.zip \
   && rm -rf AriaNg-${version}.zip \
-  && chmod -R 755 /usr/local/www/aria2 \
-  && sed -i 's/6800/80/g' /usr/local/www/aria2/js/aria-ng*.js
+  && chmod -R 755 /usr/local/www/aria2
 
 # folder for storing ssl keys
 VOLUME /app/conf/key
